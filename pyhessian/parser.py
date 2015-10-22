@@ -323,7 +323,7 @@ class ParserV1(object):
             if isinstance(result, Object):
                 fields[str(key)] = value
             else:
-                fields[key] = value
+                fields[type(key)] = value
 
             code = self._read(1)
 
